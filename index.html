@@ -213,7 +213,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>用过 Gitbook 的都知道, Gitbook 会自动生成 pdf 以提供下载, 但十分遗憾的是自动生成的 pdf 对中文的支持并不好, 经常出现字体不一致的现象, 影响阅读, 强迫症更是难以忍受. </p>
+        <h3 id="gitbook_u81EA_u52A8_u751F_u6210pdf_u4E2D_u6587_u5B57_u4F53_u9519_u4E71_u95EE_u9898_u89E3_u51B3_u529E_u6CD5"><a href="#gitbook_u81EA_u52A8_u751F_u6210pdf_u4E2D_u6587_u5B57_u4F53_u9519_u4E71_u95EE_u9898_u89E3_u51B3_u529E_u6CD5" class="headerlink" title="gitbook自动生成pdf中文字体错乱问题解决办法"></a>gitbook自动生成pdf中文字体错乱问题解决办法</h3><p>用过 Gitbook 的都知道, Gitbook 会自动生成 pdf 以提供下载, 但十分遗憾的是自动生成的 pdf 对中文的支持并不好, 经常出现字体不一致的现象, 影响阅读, 强迫症更是难以忍受. </p>
 <p>下面针对这一问题提供简单的解决办法: <strong>本地命令行生成 pdf 文件</strong>. 当然这种方法有一定局限性, 你需要找到托管在 github 对应的源码仓库且转换过程中不出错. (由于水平有限未能解决在线生成的pdf中文字体错乱问题, 见谅. 也就是说网站自动生成的 pdf 依旧字体错乱, 但是本地生成的pdf文件是没有这个问题的 orz… 如果是 gitbook 上的写作者的话可以本地生成 pdf 上传至网盘提供下载)</p>
 <h4 id="Gitbook__u9879_u76EE_u4ECB_u7ECD"><a href="#Gitbook__u9879_u76EE_u4ECB_u7ECD" class="headerlink" title="Gitbook 项目介绍"></a>Gitbook 项目介绍</h4><blockquote>
 <p>GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。</p>
@@ -265,6 +265,7 @@
 <p>还有就是 svg 转换 png 的错误, 可以找到对应的文件删除对应语句. 如果 svg 图片很多的话, 靠删除不能解决问题. 看了些讨论也没能解决, 如果你有解决办法, <a href="mailto:lizhixiabj@gmail.com" target="_blank" rel="external">请联系我</a>.</p>
 <h4 id="u5199_u5728_u6700_u540E"><a href="#u5199_u5728_u6700_u540E" class="headerlink" title="写在最后"></a>写在最后</h4><p>网上的一些教程由于时间太早, 有些命令已经舍弃了, 如 gitbook 的安装命令, 添加 pdf 依赖等, 还请以官方文档为准.</p>
 <p>本文旨在解决从 gitbook 下载的 pdf 中文字体错乱问题, 更多的 gitbook 使用技巧及如何构建电子书可以参考<a href="http://www.chengweiyang.cn/gitbook/index.html" target="_blank" rel="external">GitBook 简明教程</a>, 和参阅官方文档或自行 Google. 希望能对你有所帮助.</p>
+<p>给 gitbook 提交了 issue 还没有回复.</p>
 <p><a href="https://www.gitbook.com/" target="_blank" rel="external">Gitbook地址</a> || <a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">Gitbook项目地址</a> || <a href="https://chrisniael.gitbooks.io/gitbook-documentation/content/index.html" target="_blank" rel="external">中文文档</a></p>
 <p>参考: <a href="http://dockerpool.com/static/books/gitbook_cn/index.html" target="_blank" rel="external">Gitbook 使用入门</a></p>
 
