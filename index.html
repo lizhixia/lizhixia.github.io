@@ -150,6 +150,68 @@
 
       <div class="body-wrap">
   
+    <article id="post-Python中的 random 函数" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/06/Python中的 random 函数/" class="article-date">
+  	<time datetime="2016-02-06T15:26:31.000Z" itemprop="datePublished">2016-02-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tittle: Python&#20013;&#30340; random &#20989;&#25968;&#10;date: 2015-11-17 18:35:24&#10;categories: python&#10;toc: true</span><br></pre></td></tr></table></figure>
+<h1 id="Python_u4E2D_u7684_random__u51FD_u6570"><a href="#Python_u4E2D_u7684_random__u51FD_u6570" class="headerlink" title="Python中的 random 函数"></a>Python中的 random 函数</h1><p>如果你对在Python生成随机数与random模块中最常用的几个函数的关系与不懂之处，下面的文章就是对Python生成随机数与random模块中最常用的几个函数的关系，希望你会有所收获，以下就是这篇文章的介绍。</p>
+<p><code>random.random()</code>用于生成0-1之内的浮点数</p>
+<p>用于生成一个指定范围内的随机符点数，两个参数其中一个是上限，一个是下限。如果a &gt; b，则生成随机数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n: a &#60;= n &#60;= b&#12290;&#22914;&#26524; a &#60;b&#65292; &#21017; b &#60;= n &#60;= a&#12290;&#10;print random.uniform(10, 20)  &#10;print random.uniform(20, 10)  &#10;#---- &#10;#18.7356606526  &#10;#12.5798298022  &#10;random.randint</span><br></pre></td></tr></table></figure>
+<p>用于生成一个指定范围内的整数。其中参数a是下限，参数b是上限，Python生成随机数下限必须小于上限。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print random.randint(12, 20) #&#29983;&#25104;&#30340;&#38543;&#26426;&#25968;n: 12 &#60;= n &#60;= 20 &#10;print random.randint(20, 20) #&#32467;&#26524;&#27704;&#36828;&#26159;20 &#10;#print random.randint(20, 10) #&#35813;&#35821;&#21477;&#26159;&#38169;&#35823;&#30340;&#12290;</span><br></pre></td></tr></table></figure>
+<p>随机整数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62;import random&#10;&#10;&#62;&#62;&#62; random.randint(0,99)&#10;21</span><br></pre></td></tr></table></figure>
+<p>随机选取0到100间的偶数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;&#62;&#62;&#62; random.randrange(0, 101, 2)&#10;&#10;42</span><br></pre></td></tr></table></figure>
+<p>随机浮点数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;&#62;&#62;&#62; random.random()&#160;&#10;&#10;0.85415370477785668&#10;&#10;&#62;&#62;&#62; random.uniform(1, 10)&#10;&#10;5.4221167969800881</span><br></pre></td></tr></table></figure>
+<p>随机字符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;&#62;&#62;&#62; random.choice(&#39;abcdefg&#38;#%^*f&#39;)&#10;&#10;&#39;d&#39;</span><br></pre></td></tr></table></figure>
+<p>多个字符中选取特定数量的字符：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;random.sample(&#39;abcdefghij&#39;,3)&#160;&#10;&#10;[&#39;a&#39;, &#39;d&#39;, &#39;b&#39;]</span><br></pre></td></tr></table></figure>
+<p>多个字符中选取特定数量的字符组成新字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;&#62;&#62;&#62; import string&#10;&#10;&#62;&#62;&#62; string.join(random.sample([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;,&#39;h&#39;,&#39;i&#39;,&#39;j&#39;], 3)).r&#10;&#10;eplace(&#34; &#34;,&#34;&#34;)&#10;&#10;&#39;fih&#39;</span><br></pre></td></tr></table></figure>
+<p>随机选取字符串：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#62;&#62;&#62; import random&#10;&#10;&#62;&#62;&#62; random.choice ( [&#39;apple&#39;, &#39;pear&#39;, &#39;peach&#39;, &#39;orange&#39;, &#39;lemon&#39;] )&#10;&#10;&#39;lemon&#39;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-博客搭建记录 — Hexo &amp;&amp; Github" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
